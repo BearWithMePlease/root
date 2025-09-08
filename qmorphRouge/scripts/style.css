@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'ByteBounce Font';
+    src: url('../assets/font/ByteBounce.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ByteBounce Font', sans-serif; 
+    background-color: black;
+    color: greenyellow;
+}
+
+
+.button-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.image-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the image */
+    border: none;
+    background-color: transparent; /* Make background transparent */
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    outline: none; /* Remove outline on focus */
+}
+
+.button-image {
+    width: 100%; /* Make image fill the button */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+
+/* div pattern for web */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+}
+.left {
+    width: 30%;
+    text-align: left;
+    font-size: xx-large;
+}
+.center {
+    width: 30%;
+    text-align: center;
+    font-size: xx-large;
+}
+.right {
+    width: 30%;
+    text-align: right;
+    font-size: xx-large;
+}
+
+
+.leftLow {
+    width: 30%;
+    text-align: left;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.centerLow {
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+
+.rightLow {
+    width: 30%;
+    font-size: 40px;
+    text-align: left;
+    line-height: 1;
+}

@@ -1,6 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quasimorph Rougelike Tracker</title>
+    <link rel="icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="./scripts/style.css">
+</head>
 <body>
-    <h1>
-        Landing tracker page
-    </h1>
     
+<h1>Tracker:</h1>
+
+
+<div class="container"> 
+    <div class="left">
+        <h1> factions </h1>    
+    </div>
+    <div class="center"> 
+        <h1> total loops </h1>    
+    </div>
+    <div class="right">
+        <h1> bramfaturas</h1>    
+    </div>
+</div>
+
+
+
+<div class="container"> 
+    <div class="leftLow">
+            <div class="button-container">
+                <button class="toggleButton image-button" data-name="AnCom">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>AnCom</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Dilthey">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Dilthey</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="RealWare">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>RealWare</span>
+            </div>
+
+            
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="SBN">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>SBN</span>
+            </div>
+
+            
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="TianMing">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>TianMing</span>
+            </div>
+
+            
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Church">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Church of Revelation</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Coreward">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Coreward</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Daydream">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Daydream Chems</span>
+            </div>
+
+            
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Franche">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Franche Compte</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Grasshopper">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Grasshopper</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Planetbridge">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Planetbridge</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Sunlight">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Sunlight Coven</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Civil">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Civil Resistance</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Belt">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Unchained Belt</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Tezctlan">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Tezctlan</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Mask">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Feathered Mask</span>
+            </div>
+
+            <div class="button-container"> 
+                <button class="toggleButton image-button" data-name="Shedu">
+                    <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+                </button>
+                <span>&nbsp;</span>
+                <span>Shedu</span>
+            </div>
+    </div>
+
+
+    <div class="centerLow"> 
+        <h2 id="factionLoop"> factions: 0 </h2>  
+        <h2 id="bramfaturaLoop"> bramfaturas: 0 </h2>    
+  
+    </div>
+    <div class="rightLow">
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Duggur">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Duggur</span>
+        </div>
+
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Flauros">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Flauros</span>
+        </div>
+
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Gannix">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Gannix</span>
+        </div>
+
+        
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Kattaram">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Kattaram</span>
+        </div>
+
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Ron">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Ron</span>
+        </div>
+
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Shartamakhum">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Shartamakhum</span>
+        </div>
+
+        
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Skrivnus">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Skrivnus</span>
+        </div>
+
+        
+        <div class="button-container"> 
+            <button class="toggleButton image-button" data-name="Ur">
+                <img src="./assets/button/off.png" alt="Button Image" class="button-image">
+            </button>
+            <span>&nbsp;</span>
+            <span>Ur</span>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div>
+credits:
+font -> https://www.1001fonts.com/bytebounce-font.html by HipFonts
+</div>
+
+
+<script src="./scripts/script.js"></script>
+
 </body>
+</html>
