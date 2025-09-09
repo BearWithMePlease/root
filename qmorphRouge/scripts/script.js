@@ -189,9 +189,26 @@ function exportButtonStates() {
         loopCounter: loopCounter
     };
 
-    const jsonStates = JSON.stringify(combinedStates);
+    const jsonStates = JSON.stringify(combinedStates, null, 2);
     console.log(jsonStates);
+
+    const blob = new Blob([jsonStates], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'buttonStates.json'; // Set the file name
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Clean up the URL object
+    URL.revokeObjectURL(link.href);
+
 }
+
+document.getElementById('downloadSave').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    exportButtonStates(); 
+});
 
 
 function importButtonStates(jsonString) {
@@ -206,6 +223,19 @@ function importButtonStates(jsonString) {
     updateButtonVisualState()
     updateLoopCounter()
 }
+
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const jsonString = e.target.result;
+            importButtonStates(jsonString);
+        };
+        reader.readAsText(file);
+    }
+});
+
 
 
 // update until

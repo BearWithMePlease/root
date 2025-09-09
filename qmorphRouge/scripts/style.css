@@ -7,34 +7,89 @@
 
 body {
     font-family: 'ByteBounce Font', sans-serif; 
-    background-color: black;
-    color: greenyellow;
+    border: 5px solid #2a574a;
+    margin: 4px;
+    padding: 20px;
+    background-color: #0a0a0f;
+    color: #90d785;
+    position:relative;
+}
+
+.corner-dot {
+    position: absolute;
+    width: 10px; 
+    height: 10px;
+    background-color: #fffdb8; 
+}
+
+.corner-dot.top-left {
+    top: -5px; 
+    left: -5px;
+}
+
+.corner-dot.top-right {
+    top: -5px;
+    right: -5px;
+}
+
+.corner-dot.bottom-left {
+    bottom: -5px; 
+    left: -5px;
+}
+
+.corner-dot.bottom-right {
+    bottom: -5px; 
+    right: -5px;
 }
 
 
 .button-container {
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .image-button {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the image */
+    justify-content: center;
     border: none;
-    background-color: transparent; /* Make background transparent */
+    background-color: transparent;
     cursor: pointer;
-    padding: 0; /* Remove padding */
-    outline: none; /* Remove outline on focus */
+    padding: 0;
+    outline: none;
 }
 
 .button-image {
-    width: 100%; /* Make image fill the button */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
+.miniheader{
+    font-size: 40px;
+}
+
+.stationText{
+    font-size: 30px;
+}
+
+a {
+    color: #90d785;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #b8f1b8; 
+}
+
+a:visited {
+    color: #90d785; 
+}
+
+.bigHeader {
+    font-size: 100px;
+}
 /* div pattern for web */
 
 .container {
@@ -86,10 +141,3 @@ body {
     font-size: 26px;
 }
 
-.miniheader{
-    font-size: 40px;
-}
-
-.stationText{
-    font-size: 30px;
-}
