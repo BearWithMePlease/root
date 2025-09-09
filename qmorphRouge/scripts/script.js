@@ -19,18 +19,30 @@ let buttonStates = {
 
 
     "Duggur": false, //here start the bramfaturas
-    "Flauros": false,
     "Gannix": false,
+    "Shartamakhum": false,
+    "Ur": false,
+
     "Kattaram": false,
     "Ron": false,
-    "Shartamakhum": false,
     "Skrivnus": false,
-    "Ur": false
+    "Flauros": false
 };
 
 let loopCounter = {
     "faction": 0,
     "bramfatura": 0
+}
+
+const availStations = {
+    "Duggur": ["Moon", "Fuller"],
+    "Flauros": ["Jupiter", "Io", "Europa", "Ganymede", "Callisto"],
+    "Gannix": ["Venus", "HAVOC", "Mechta"],
+    "Kattaram": ["Ceres", "Wernher", "434 Hungaria"],
+    "Ron": ["Vesta, Pallas, Annagerman"],
+    "Shartamakhum": ["Mercury", "Vulcano", "Citadel-1"],
+    "Skrivnus": ["Geist", "Interamnia", "Hygiea"],
+    "Ur": ["Mars", "Phobos", "Deimos"]
 }
 
 const toggleButtons = document.querySelectorAll('.toggleButton');
@@ -59,6 +71,9 @@ toggleButtons.forEach(button => {
             incrementFaction();
             unsetFaction();
         }
+
+        buildInnerAvailableStationsArray()
+        buildOuterAvailableStationsArray()
     });
 });
 
@@ -126,6 +141,44 @@ function incrementBramfatura(){
     updateLoopCounter();
 }
 
+function buildInnerAvailableStationsArray(){
+    let arr = document.getElementById("inner");
+    arr.textContent = "";
+
+    const keys = Object.keys(buttonStates);
+
+    for(let i = keys.indexOf("Duggur"); i <= keys.indexOf("Ur"); i++){
+        const buttonName = keys[i];
+        if(!buttonStates[buttonName]){
+            const buff = document.createTextNode(availStations[buttonName].join(", "));
+
+            arr.appendChild(buff);
+            arr.appendChild(document.createElement("br"))
+        }
+    }
+
+    return arr;
+}
+
+function buildOuterAvailableStationsArray(){
+    let arr = document.getElementById("outer");
+    arr.textContent = "";
+
+    const keys = Object.keys(buttonStates);
+
+    for(let i = keys.indexOf("Kattaram"); i < keys.length; i++){
+        const buttonName = keys[i];
+        if(!buttonStates[buttonName]){
+            const buff = document.createTextNode(availStations[buttonName].join(", "));
+
+            arr.appendChild(buff);
+            arr.appendChild(document.createElement("br"))
+        }
+    }
+
+    return arr;
+}
+
 
 
 
@@ -175,3 +228,9 @@ function updateLoopCounter(){
     document.getElementById("factionLoop").textContent = `factions: ${loopCounter.faction}`;
     document.getElementById("bramfaturaLoop").textContent = `bramfaturas: ${loopCounter.bramfatura}`;
 }
+
+
+
+// functions triggering on startup
+buildInnerAvailableStationsArray()
+buildOuterAvailableStationsArray()

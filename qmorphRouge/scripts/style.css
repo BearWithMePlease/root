@@ -81,3 +81,15 @@ body {
     text-align: left;
     line-height: 1;
 }
+
+.stationContainer{
+    font-size: 26px;
+}
+
+.miniheader{
+    font-size: 40px;
+}
+
+.stationText{
+    font-size: 30px;
+}
